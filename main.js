@@ -7,6 +7,7 @@ var myclose=document.getElementById("close");
 myclose.onclick = function(){
     modal.style.display="none";
 }
+var difference=0;
 
 function setup(){
     video = createCapture(VIDEO);
@@ -24,5 +25,18 @@ function modalLoaded(){
 function gotResult(result){
     if(result.length>0){
         console.log(result);
+        rightWrist=result[0].pose.rightWrist.x;
+        leftWrist=result[0].pose.leftWrist.x;
+        difference=floor(leftWrist-rightWrist);
+        console.log("DIFFERENCE = "+difference);
     }
 }
+
+function draw(){
+    background("#555b5e93");
+    fill("#4dd8d7");
+    textSize(difference);
+    text("Notice Board", 50,250);
+}
+    
+    

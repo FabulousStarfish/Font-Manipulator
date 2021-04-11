@@ -45,7 +45,7 @@
     position: fixed;
     font-family: 'Indie Flower', cursive;
 }
-#text{
+#text_note{
     font-size: 20px;
 }
 button{
@@ -53,7 +53,6 @@ button{
     background-color: transparent;
 }
 canvas{
-    background: #555b5e93 ;
     border: 5px solid #4dd8d7;
     box-shadow: 1px 1px 40px #ca4a56;
 }
